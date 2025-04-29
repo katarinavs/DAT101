@@ -1,30 +1,17 @@
 "use strict"
 import { initPrintOut, printOut, newLine } from "../../common/script/utils.mjs";
-initPrintOut(document.getElementById("txtOut"));
-printOut("Test");
 
-const movieLimit = 16;
-const ageLimit = 18;
-let personAge1 = 18;
-let personAge2 = 13;
+let count = 1;
+const numbers [20, 15, 10, 17, 25, 3, 5, 11, 13, 19, 23, 27];
 
-if(personAge2 < personAge1){
-    const age = personAge1;
-    personAge1 = personAge2;
-    personAge2  = age;
+printOut("Original array: " + numbers.join(", "));
+
+// sort the numbers in ascending order
+numbers.sort(compareNumbers);
+printOut("Sorted array: " + numbers.join(", "));
+
+function compareNumbers(aNumberA, aNumberB) {
+    printOut(count + " - Comparing " + aNumberA + " and " + aNumberB + " returns " + (aNumberA - aNumberB));
+    count++;
+    return aNumberA - aNumberB;
 }
-
-if(personAge1 < movieLimit){
-    if(personAge2 > ageLimit){
-        printOut("Du kan ikke gå men du kan ha med deg en som kan!");
-    }else if(personAge2 >= movieLimit){
-        printOut("Beklager, bare person 2 kan gå på kino.");
-    }else{
-        printOut("Beklager, dere kan ikke gå på kino.");
-    }
-}else{
-    printOut("Du kan gå på kino alene!");
-}
-
-
-printOut("Ferdig!");

@@ -48,3 +48,10 @@ toggle = !toggle; // false, because ! negates the value of toggle
 
 // Tabell eksempel:
 const table1 = [1, 2, "hei på deg", (name: "Ola", age: 30), {1, 2, 3}];
+
+const myFunction = function(aParam1, aParam2) {
+    console.log("Hello World!");
+    return aParam1 + aParam2;
+}
+
+myFunction(1, 2); /// 3
